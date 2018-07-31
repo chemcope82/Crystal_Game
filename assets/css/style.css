@@ -1,16 +1,22 @@
+
+body {
+    background-image: url(../images/light-grey-terrazzo.png);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* .cell {
+    border: 2px solid gray;
+} */
+h1 {
+    font-family: 'Flavors', cursive;
+
+}
+img {
+    width: 150px;
+}
 button {
     background-color: #fff;
-    float: right;
 }
-
-#crystal-buttons {
-    width: 250px;
-}
-
-#instructions{
-    float: right;
-}
-
-.cell {
-    border: 2px solid gray;
+button:hover {
+    cursor: pointer;
 }

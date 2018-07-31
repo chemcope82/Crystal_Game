@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Flavors|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -15,28 +16,48 @@
 <body>
     <section class="container" id="wrapper">
         <div class="row">
-            <div class="col-md-12">
-                <h1> Crystal Collector! </h1>
+            <div class="col-md-4 cell" id="instructions">
+                <div class="row">
+                    <div class="col-md-12 cell">
+                        <h1> Crystal Collector! </h1> <br>
+                        <h3>Instructions:</h3>
+                        <p>
+                            You are given a random number to begin the game. <br><br>
+                            Each of the 4 crystals is assigned a random value to begin the game but the value is a secret. <br>
+                            When you click on a crystal, its value is added to your total. <br><br>
+                            You must match your total to the target number <span style="text-decoration: underline; font-weight: bold">exactly</span> to win the game. <br><br>
+                            The target number and crystal values will reset at the beginning of each game. <br><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 cell" id="target-number">
+                        Target Number:
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 cell" id="user-number">
+                        Your Total:
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 cell" id="wins">
+                        Wins:
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 cell" id="losses">
+                        Losses:
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 cell" id="instructions">
-                <h3>Instructions:</h3>
-                <p>
-                    You are given a random number to begin the game. <br>
-                    Each of the 4 crystals is assigned a random value to begin the game but the value is a secret. <br>
-                    When you click on a crystal, its value is added to your total. <br>
-                    You must match your total to the target number <span style="text-decoration: underline; font-weight: bold">exactly</span> to win the game. <br>
-                    The target number and crystal values will reset at the beginning of each game. <br>
-                </p>
-            </div>
-            <div class="col-md-3" id="crystal-buttons">
+            <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-12 cell">
                         <button type="button" class="crystal" id="blue-crystal" value="0"> 
                             <img src="assets/images/blue-crystal.png">
                         </button>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 cell">
@@ -59,26 +80,6 @@
                         </button>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 cell" id="numbers">
-                <div class="row">
-                    <div class="col-md-12" id="target-number">
-                        Target Number:
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 cell" id="user-number">
-                        Your Total:
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 cell" id="wins">
-                Wins:
-            </div>
-            <div class="col-md-6 cell" id="losses">
-                Losses:
             </div>
         </div>
     </section>
