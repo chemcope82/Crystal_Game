@@ -2,6 +2,7 @@
 body {
     background-image: url(../images/light-grey-terrazzo.png);
     font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
 }
 
 /* .cell {
@@ -19,4 +20,9 @@ button {
 }
 button:hover {
     cursor: pointer;
+}
+
+#target-number, #user-number {
+    font-weight: bold;
+    font-size: 28px;
 }
