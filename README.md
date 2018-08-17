@@ -7,3 +7,5 @@
 * Users must click a crystal to discover its value by having it added to their total.
 * A user wins if he/she matches their value to the random target value **exactly**.
 * Each time the game is reset, new crystal values are assigned and a new target value is generated.
+
+[Crystal Collector](https://chemcope82.github.io/unit-4-game/)
