@@ -44,6 +44,8 @@ function endGame () {
     $("#user-number").text("");
     $("#target-number").text("");
     $("#instructions").show();
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + losses);
 }
 
 //create a function to compare numbers after a crystal is clicked
