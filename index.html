@@ -16,65 +16,58 @@
 <body>
     <section class="container" id="wrapper">
         <div class="row">
-            <div class="col-md-4 cell" id="instructions">
+            <div class="col-md-6 cell">
                 <div class="row">
                     <div class="col-md-12 cell">
                         <h1> Crystal Collector! </h1> <br>
-                        <h3>Instructions:</h3>
-                        <p>
-                            You are given a random number to begin the game. <br><br>
-                            Each of the 4 crystals is assigned a random value to begin the game but the value is a secret. <br>
-                            When you click on a crystal, its value is added to your total. <br><br>
-                            You must match your total to the target number <span style="text-decoration: underline; font-weight: bold">exactly</span> to win the game. <br><br>
-                            The target number and crystal values will reset at the beginning of each game. <br>
+                        <div id="instructions">
+                            <h3 id="instructionHead">Instructions:</h3>
+                            <p id="instructionText">
+                                You are given a random number to begin the game. <br><br>
+                                Each of the 4 crystals is assigned a random value to begin the game but the value is a secret. <br>
+                                When you click on a crystal, its value is added to your total. <br><br>
+                                You must match your total to the target number <span style="text-decoration: underline; font-weight: bold">exactly</span> to win the game. <br><br>
+                                The target number and crystal values will reset at the beginning of each game. <br>
+                            </p>
+                            <button id="startGame">Start Game!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="scores">
+                    <div class="col-md-12">
+                        <p id="target-number">
+                            Target Number:
+                        </p>
+                        <p id="user-number">
+                            Your Total:
+                        </p>
+                        <p id="wins">
+                            Wins:
+                        </p>
+                        <p id="losses">
+                            Losses:
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 cell number" id="target-number">
-                        Target Number:
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 cell number" id="user-number">
-                        Your Total:
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 cell number" id="wins">
-                        Wins:
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 cell number" id="losses">
-                        Losses:
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6" id="crystalButtons">
                 <div class="row">
-                    <div class="col-md-12 cell">
+                    <div class="col-md-12 col-sm-6">
                         <button type="button" class="crystal" id="blue-crystal" value="0"> 
                             <img src="assets/images/blue-crystal.png">
                         </button>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 cell">
+                    <div class="col-md-12 col-sm-6">
                         <button type="button" class="crystal" id="pink-crystal" value="0">
                             <img src="assets/images/pink-crystal.png">                            
                         </button>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 cell">
+                    <div class="col-md-12 col-sm-6">
                         <button type="button" class="crystal" id="green-crystal" value="0">
                             <img src="assets/images/green-crystal.png">
                         </button>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 cell">
+                    <div class="col-md-12 col-sm-6">
                         <button type="button" class="crystal" id="orange-crystal" value="0">
                             <img src="assets/images/orange-crystal.png">
                         </button>
@@ -85,6 +78,5 @@
     </section>
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-    <!-- Here's a link to my portfolio with the crystals game added in: https://chemcope82.github.io/Bootstrap-Portfolio/-->
 </body>
 </html>

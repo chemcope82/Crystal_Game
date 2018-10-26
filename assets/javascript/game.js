@@ -13,69 +13,92 @@ var targetNumber;
 
 //create a function to initiate the game
 function startGame () {
+    $("#instructions").hide();
+    $("#scores").show();
+    $("#crystalButtons").show();
     //reset user total and display it
     userTotal = 0;
     $("#user-number").text("Your Total: " + userTotal);
 
     //generate a random target number between 19-120 and display it
     targetNumber = Math.floor((Math.random() * 102) + 19);
-    console.log(targetNumber);
     $("#target-number").text("Target Number: " + targetNumber);
 
     //display current wins and losses counters
     $("#wins").text("Wins: " + wins);
     $("#losses").text("Losses: " + losses);
 
-    //assign values to each crystal and display in console
+    //assign values to each crystal (1-12)
     blueCrystal = Math.floor((Math.random() * 12) + 1);
-    console.log("Blue: " + blueCrystal)
-    // $("#blue-crystal").attr("value", blueCrystal);
     pinkCrystal = Math.floor((Math.random() * 12) + 1);
-    console.log("Pink: " + pinkCrystal)
     greenCrystal = Math.floor((Math.random() * 12) + 1);
-    console.log("Green: " + greenCrystal)
     orangeCrystal = Math.floor((Math.random() * 12) + 1);
-    console.log("Orange: " + orangeCrystal)
+}
+
+//create a function to end gameplay if a user choses not to continue
+function endGame () {
+    $("#crystalButtons").hide();
+    $("#instructionHead").text("Goodbye!");
+    $("#instructionText").text("");
+    $("#startGame").text("Play Again");
+    $("#user-number").text("");
+    $("#target-number").text("");
+    $("#instructions").show();
 }
 
 //create a function to compare numbers after a crystal is clicked
 function checkNumer() {
     $("#user-number").text("Your Total: " + userTotal);
     if (userTotal === targetNumber) {
-        alert("You Win!");
         wins++;
-        startGame();
+        var playAgain = confirm("You Win!\n\nDo you want to play again?");
+        if(playAgain) {
+            startGame();
+        } else {
+            endGame();
+        }
     }
     else if (userTotal > targetNumber) {
-        alert("You Lose!");
         losses++;
-        startGame();
+        var playAgain = confirm("You Lost!\n\nDo you want to play again?");
+        if(playAgain) {
+            startGame();
+        } else {
+            endGame();
+        }
     }
 
 }
 
-startGame();
+$( document ).ready(function() {
 
-$("#blue-crystal").on("click", function() {
-    userTotal += blueCrystal;
-    console.log(userTotal);
-    checkNumer();
-})
+    $("#scores").hide();
+    $("#crystalButtons").hide();
+    $("#instructions").show();
 
-$("#pink-crystal").on("click", function() {
-    userTotal += pinkCrystal;
-    console.log(userTotal);
-    checkNumer();
-})
+    $("#startGame").on("click", function() {
+        startGame();
+    })
+      
 
-$("#green-crystal").on("click", function() {
-    userTotal += greenCrystal;
-    console.log(userTotal);
-    checkNumer();
-})
+    $("#blue-crystal").on("click", function() {
+        userTotal += blueCrystal;
+        checkNumer();
+    })
 
-$("#orange-crystal").on("click", function() {
-    userTotal += orangeCrystal;
-    console.log(userTotal);
-    checkNumer();
-})
+    $("#pink-crystal").on("click", function() {
+        userTotal += pinkCrystal;
+        checkNumer();
+    })
+
+    $("#green-crystal").on("click", function() {
+        userTotal += greenCrystal;
+        checkNumer();
+    })
+
+    $("#orange-crystal").on("click", function() {
+        userTotal += orangeCrystal;
+        checkNumer();
+    })
+
+});
